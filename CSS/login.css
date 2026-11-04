@@ -1,0 +1,96 @@
+body{
+background-color: #0d111d;
+border-radius: 1px solid #1f293d;
+}
+
+header h1{
+    color: #f0f6fc;
+    font-family: times new roman, serif;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 65vh;
+}
+
+.login-box {
+    background-color: #141e30;
+    border: 1px solid #26334a;
+    border-radius: 12px;
+
+    width: 350px;
+    padding: 35px;
+
+    text-align: center;
+}
+
+.login-box h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.subtitulo {
+    color: #8fa7c6;
+    font-family: Arial, sans-serif;
+    margin-bottom: 25px;
+}
+
+.login-box label {
+    display: block;
+    color: #8fa7c6;
+    text-align: left;
+    margin-bottom: 7px;
+    font-family: Arial, sans-serif;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+
+    box-sizing: border-box;
+
+    background-color: #0b0f19;
+    border: 1px solid #34445e;
+    border-radius: 6px;
+
+    color: white;
+    font-size: 15px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+
+    background-color: #263c5c;
+    color: white;
+
+    border: 1px solid #405777;
+    border-radius: 6px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #385477;
+}
+
+.recuperar {
+    display: block;
+    margin-top: 18px;
+    color: #9bbce8;
+}
+
+.cadastro {
+    color: #8fa7c6;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.cadastro a {
+    color: #9bbce8;
+}

@@ -1,0 +1,274 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #0b0f19;
+    padding: 25px 7%;
+    border-bottom: 1px solid #26364e;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* MENU */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    background-color: #141e30;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border: 1px solid #26364e;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #1e4770;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* TÍTULOS */
+
+h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: white;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+/* MENU DOS NÍVEIS */
+
+.lateral {
+    margin-bottom: 30px;
+}
+
+.menu-lateral {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.menu-lateral a {
+    background-color: #141e30;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border: 1px solid #26364e;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+    background-color: #1e4770;
+}
+
+/* ÁREA DOS CURSOS */
+
+.area-cursos {
+    background-color: #101a2b;
+    padding: 30px;
+    border: 1px solid #25354b;
+    border-radius: 10px;
+}
+
+.area-cursos h2 {
+    margin-top: 15px;
+}
+
+/* PROGRESSO */
+
+.progresso {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.barra {
+    background-color: #26364e;
+    width: 55%;
+    height: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.barra-preenchida {
+    background-color: #3299d6;
+    height: 100%;
+    width: 0%;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #34465e;
+    margin: 25px 0;
+}
+
+/* CARTÕES DAS AULAS */
+
+.aula {
+    background-color: #141e30;
+    border: 1px solid #26364e;
+    border-radius: 8px;
+    padding: 22px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    transition: 0.3s;
+}
+
+.aula:hover {
+    border-color: #3299d6;
+    transform: translateY(-3px);
+}
+
+.numero {
+    background-color: #1e4770;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacoes {
+    flex: 1;
+}
+
+.informacoes h3 {
+    color: white;
+}
+
+.informacoes p {
+    color: #a8b9ce;
+    margin-bottom: 8px;
+}
+
+.informacoes small {
+    color: #8293a8;
+}
+
+/* BOTÕES */
+
+.botao-aula {
+    background-color: #1e4770;
+    color: white;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 5px;
+    border: 1px solid #326b9e;
+    transition: 0.3s;
+}
+
+.botao-aula:hover {
+    background-color: #326b9e;
+}
+
+/* CERTIFICADO */
+
+.certificado {
+    background-color: #141e30;
+    border: 1px solid #26364e;
+    border-left: 4px solid #3299d6;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 7px;
+}
+
+.certificado p {
+    color: #a8b9ce;
+}
+
+/* LINKS GERAIS */
+
+a {
+    cursor: pointer;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #080c14;
+    color: #8293a8;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #26364e;
+    margin-top: 40px;
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    main {
+        width: 94%;
+    }
+
+    .area-cursos {
+        padding: 18px;
+    }
+
+    .aula {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .barra {
+        width: 100%;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+}
