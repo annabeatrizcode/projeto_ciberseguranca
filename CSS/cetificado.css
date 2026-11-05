@@ -1,0 +1,29 @@
+.certificate-item-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que o botão desça se o ecrã for pequeno (telemóveis) */
+  gap: 16px;
+  background-color: #0a101d;
+  border: 1px solid #1c283c;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 16px;
+}
+
+.cert-info {
+  flex: 1;
+  min-width: 250px; /* Garante espaço para o texto antes de quebrar */
+}
+
+.cert-info h3 {
+  color: #00d2ff;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.cert-info p {
+  color: #9ab0c7;
+  font-size: 0.9rem;
+  margin: 0;
+}

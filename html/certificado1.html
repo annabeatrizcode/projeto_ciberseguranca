@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificado de Conclusão — Cibersegurança</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos específicos para a página de certificado */
+    .certificate-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh;
+    }
+
+    .certificate-card {
+      width: 100%;
+      max-width: 800px;
+      background: linear-gradient(135deg, #131b2a 0%, #0a101d 100%);
+      border: 2px solid #00d2ff;
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0, 210, 255, 0.15);
+      position: relative;
+    }
+
+    .certificate-header {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #00d2ff;
+      margin-bottom: 20px;
+    }
+
+    .certificate-title {
+      font-size: 2.5rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .certificate-subtitle {
+      color: #9ab0c7;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .recipient-name {
+      font-size: 2rem;
+      color: #38ef7d;
+      font-weight: bold;
+      border-bottom: 2px solid #1c283c;
+      display: inline-block;
+      padding: 0 20px 8px;
+      margin: 10px 0 25px;
+    }
+
+    .certificate-body {
+      font-size: 1.05rem;
+      color: #c5d1de;
+      line-height: 1.8;
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+
+    .certificate-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #1c283c;
+      padding-top: 25px;
+      margin-top: 20px;
+    }
+
+    .signature-block {
+      text-align: center;
+    }
+
+    /* Estilo de assinatura manuscrita fictícia */
+    .signature-font {
+      font-family: 'Brush Script MT', cursive, sans-serif;
+      font-size: 1.8rem;
+      color: #00d2ff;
+      margin-bottom: -5px;
+    }
+
+    .signature-line {
+      font-size: 0.85rem;
+      color: #8899a6;
+      border-top: 1px solid #8899a6;
+      padding-top: 5px;
+      min-width: 220px;
+    }
+
+    .actions-bar {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+    }
+  </style>
+</head>
+<body class="certificate-page">
+
+  <main class="container" style="display: flex; flex-direction: column; align-items: center;">
+    
+    <!-- O Certificado Visual -->
+    <div class="certificate-card">
+      <div class="certificate-header">Certificado de Conclusão de Módulo</div>
+      
+      <h1 class="certificate-title">Cibersegurança</h1>
+      <p class="certificate-subtitle">Nível Iniciante</p>
+      
+      <div class="certificate-body">
+        <p>Certificamos que</p>
+        <!-- Substitui o texto abaixo pelo teu nome -->
+        <div class="recipient-name">Nome do ALuno</div>
+        <p>concluiu com sucesso o módulo introdutório, abrangendo os fundamentos essenciais da proteção digital, a Tríade CIA, identificação de engenharia social, higiene de senhas e boas práticas de navegação segura na internet.</p>
+      </div>
+
+      <div class="certificate-footer">
+        <!-- Assinatura Fictícia 1 -->
+        <div class="signature-block">
+          <div class="signature-font">Arthur Vance</div>
+          <div class="signature-line">Diretor de Tecnologia (CTO)</div>
+        </div>
+        
+        <!-- Assinatura Fictícia 2 -->
+        <div class="signature-block">
+          <div class="signature-font">Beatriz Bezerra</div>
+          <div class="signature-line">Instrutora de Cibersegurança</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botões de Ação -->
+    <div class="actions-bar">
+      <a href="index.html" class="btn btn-secondary">&larr; Voltar ao Início</a>
+      <button class="btn btn-primary" onclick="window.print()">🖨️ Descarregar / Imprimir</button>
+    </div>
+
+  </main>
+
+</body>
+</html>

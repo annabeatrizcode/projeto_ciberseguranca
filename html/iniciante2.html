@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 2: Segurança na Internet</title>
+  <link rel="stylesheet" href="../CSS/iniciante2.css">
+</head>
+<body>
+
+  <!-- Cabeçalho / Navegação -->
+  <header class="navbar">
+    <a href="index.html" class="back-link">&larr; Voltar aos Cursos</a>
+    <span class="lesson-tag">Nível Iniciante • Aula 2</span>
+  </header>
+
+  <main class="container">
+    
+    <!-- Hero da Aula -->
+    <section class="lesson-header">
+      <h1>Segurança na Internet</h1>
+      <p class="subtitle">Aprenda a navegar com segurança e a proteger-se contra ameaças comuns na web.</p>
+      
+      <!-- Barra de Progresso (50% concluído) -->
+      <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 50%;"></div>
+      </div>
+    </section>
+
+    <!-- Conteúdo da Aula -->
+    <section class="content-section">
+      
+      <!-- Módulo 1 -->
+      <article class="card">
+        <h2>1. Higiene de Senhas</h2>
+        <p>
+          Uma senha forte é a sua primeira linha de defesa. Evite usar sequências óbvias (como <em>123456</em> ou <em>password</em>) ou informações pessoais fáceis de adivinhar (datas de nascimento, nomes de animais de estimação).
+        </p>
+        <p>
+          Utilize combinações longas com letras maiúsculas, minúsculas, números e símbolos, e evite reutilizar a mesma senha em vários sites diferentes.
+        </p>
+      </article>
+
+      <!-- Módulo 2 -->
+      <article class="card">
+        <h2>2. Autenticação Multifator (MFA / 2FA)</h2>
+        <p>
+          Apenas uma palavra-passe pode não ser suficiente se houver uma fuga de dados. A autenticação em duas etapas adiciona uma camada extra de segurança, exigindo uma segunda confirmação (como um código enviado para uma aplicação autenticadora) para além da senha.
+        </p>
+      </article>
+
+      <!-- Módulo 3 -->
+      <article class="card">
+        <h2>3. Identificando Phishing e Links Maliciosos</h2>
+        <p>
+          O <em>phishing</em> ocorre quando atacantes se fazem passar por entidades legítimas (bancos, redes sociais) para roubar os seus dados.
+        </p>
+        <details class="accordion">
+          <summary>Como identificar um link falso?</summary>
+          <div class="accordion-content">
+            <p>Verifique sempre o URL antes de clicar. Erros ortográficos subtis no domínio (ex: <em>netf1ix.com</em> em vez de <em>netflix.com</em>) ou pedidos urgentes de dados são fortes indícios de golpe.</p>
+          </div>
+        </details>
+      </article>
+
+      <!-- Exercícios Práticos Integrados -->
+      <article class="card exercise-card">
+        <h2>🛠️ Exercícios Práticos: Navegação Segura</h2>
+        <p>Responda às questões abaixo para testar os seus conhecimentos sobre segurança na internet.</p>
+
+        <!-- Questão 1 -->
+        <div class="exercise-group">
+          <p><strong>1. Estudo de Caso — Palavra-passe:</strong></p>
+          <p class="subtitle-text">
+            <em>"Um utilizador usa a mesma senha '123456' no seu e-mail pessoal, nas redes sociais e no site de compras online."</em>
+          </p>
+          <p class="quiz-question">Qual é o principal risco desta prática?</p>
+          
+          <div class="quiz-options">
+            <label class="option">
+              <input type="radio" name="q1" value="a">
+              <span>A página web vai carregar mais devagar.</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q1" value="b">
+              <span>Se uma das contas for comprometida, todas as outras também ficam vulneráveis.</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q1" value="c">
+              <span>Não existe risco se a senha tiver números.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Questão 2 -->
+        <div class="exercise-group">
+          <p><strong>2. Estudo de Caso — Phishing:</strong></p>
+          <p class="subtitle-text">
+            <em>"Recebeu um e-mail com o logótipo do seu banco a dizer que a sua conta vai ser bloqueada e a exigir que clique num link para atualizar os dados urgentemente."</em>
+          </p>
+          <p class="quiz-question">O que deve fazer?</p>
+          
+          <div class="quiz-options">
+            <label class="option">
+              <input type="radio" name="q2" value="a">
+              <span>Clicar imediatamente no link para evitar o bloqueio.</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q2" value="b">
+              <span>Partilhar o link com os amigos nas redes sociais.</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q2" value="c">
+              <span>Desconfiar, não clicar e verificar diretamente na aplicação oficial do banco.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Botão de Verificação -->
+        <button class="btn btn-primary full-width-btn" onclick="validarExerciciosAula2()">Verificar Respostas</button>
+        
+        <!-- Contentor de Feedback -->
+        <div id="feedback-geral" class="feedback-container"></div>
+
+        <!-- Rodapé com Botões de Navegação -->
+        <div class="lesson-footer">
+          <a href="aula1.html" class="btn btn-secondary">&larr; Aula Anterior</a>
+          <a href="index.html" class="btn btn-primary">Concluir Módulo &rarr;</a>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- Script JavaScript Separado -->
+  <script src="script-aula2.js"></script>
+</body>
+</html>
