@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #080c14;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.lesson-container {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.lesson-header {
+  background-color: #0b1329;
+  border: 1px solid #1c85e8;
+  box-shadow: 0 0 20px rgba(28, 133, 232, 0.2);
+  border-radius: 12px;
+  padding: 35px;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(0, 188, 212, 0.15);
+  color: #00bcd4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.lesson-header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+.lesson-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background-color: #0b1329;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.card h2 {
+  color: #00ff88;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card li {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.card li strong {
+  color: #00bcd4;
+}
+
+/* Destaque especial para o cartão de exemplo prático */
+.example-card {
+  border-color: #1c85e8;
+  background: linear-gradient(135deg, #0b1329 0%, #0e1a3b 100%);
+}
+
+.example-card h2 {
+  color: #00bcd4;
+}
+
+.actions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  margin-top: 10px;
+}
+
+.action-btn {
+  background-color: #0b1329;
+  color: #ffffff;
+  border: 1px solid #1c85e8;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #111d3b;
+  border-color: #00bcd4;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+}
+
+.btn-next {
+  background-color: #1c85e8;
+  border-color: #1c85e8;
+}
+
+.btn-next:hover {
+  background-color: #1565c0;
+  border-color: #00bcd4;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 5: Redes e Segurança - Cibersegurança</title>
+  
+  <link rel="stylesheet" href="../CSS/avancado1.css">
+</head>
+<body>
+
+  <div class="lesson-container">
+
+    <!-- O Cabeçalho da Aula -->
+    <header class="lesson-header">
+      <span class="badge">Módulo 5 • Nível Avançado</span>
+      <h1>Redes e Segurança</h1>
+      <p class="subtitle">Entenda os conceitos avançados de proteção de redes, topologias seguras e transmissão de dados.</p>
+    </header>
+
+    <!-- O Conteúdo Teórico Detalhado -->
+    <main class="lesson-content">
+      
+      <section class="card">
+        <h2>1. O que é Segurança de Redes?</h2>
+        <p>
+          A segurança de redes engloba todas as políticas, dispositivos e software projetados para proteger a integridade, a confidencialidade e a acessibilidade de redes informáticas e dos dados que por elas trafegam. Numa arquitetura moderna, assume-se o princípio de <em>Zero Trust</em> (Confiança Zero), onde nenhum dispositivo ou utilizador dentro ou fora da rede é considerado seguro por defeito.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>2. Principais Mecanismos de Proteção</h2>
+        <ul>
+          <li><strong>Firewalls de Próxima Geração (NGFW):</strong> Vão muito além do bloqueio básico de portas, inspecionando pacotes a fundo e bloqueando conteúdos maliciosos em tempo real.</li>
+          <li><strong>Redes Privadas Virtuais (VPNs):</strong> Estabelecem um canal de comunicação encriptado de ponta a ponta, essencial para conexões corporativas remotas ou redes Wi-Fi públicas vulneráveis.</li>
+          <li><strong>Segmentação de Rede e VLANs:</strong> Dividem a rede corporativa em zonas isoladas. Se um invasor comprometer uma estação de trabalho, ele não terá acesso automático aos servidores críticos de bases de dados.</li>
+        </ul>
+      </section>
+
+      <!-- Exemplo Prático Detalhado -->
+      <section class="card example-card">
+        <h2>💡 Exemplo Prático: O Ataque "Man-in-the-Middle" (MitM) e a Defesa por HTTPS</h2>
+        <p>
+          Imagine que está num café e se conecta a uma rede Wi-Fi aberta para aceder ao sistema de home banking do seu banco. 
+        </p>
+        <p>
+          <strong>O Risco (Sem Proteção de Rede Adequada):</strong> Se a página do banco utilizasse apenas o protocolo HTTP desatualizado, um cibercriminoso na mesma rede Wi-Fi conseguiria intercetar todo o tráfego ("ouvir" a conexão no meio) e capturar o seu nome de utilizador e palavra-passe em texto plano.
+        </p>
+        <p>
+          <strong>A Solução (Com Redes e Protocolos Seguros):</strong> Graças aos padrões avançados de segurança de rede e encriptação (como o <strong>TLS/HTTPS</strong> e redes encriptadas WPA3), os dados entre o seu dispositivo e o servidor do banco viajam completamente baralhados (encriptados). Mesmo que o atacante intercepte os pacotes de dados, ele verá apenas carateres aleatórios ilegíveis, mantendo as suas credenciais a salvo.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- Navegação / Ações -->
+    <footer class="actions-container">
+      <a href="inicio.html" class="action-btn">← Voltar ao Início</a>
+      <a href="aula6.html" class="action-btn btn-next">Ir para a Aula 6 →</a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
