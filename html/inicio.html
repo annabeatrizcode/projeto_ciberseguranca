@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
     <link rel="stylesheet" href="../CSS/inicio.css">
- <!-- Se a pasta se chamar "javascript" com 'j' minúsculo: -->
 <script src="../javascript/concluir_modulo.js" defer></script>                                                                                                
 
 </head>
@@ -43,7 +42,7 @@
 
     <hr>
 
-    <!-- Restante dos módulos... -->
+    
 
         <h2 id="iniciante">Nível Iniciante</h2>
 
@@ -75,7 +74,7 @@
                 <h3>Senhas e Proteção de Contas</h3>
                 <p>Aprenda a proteger suas contas.</p>
             </div>
-            <a href="#" class="botao-aula">▶ Iniciar</a>
+            <a href="../html/intermediario1.html" class="botao-aula">▶ Iniciar</a>
         </article>
 
         <article class="aula">
@@ -84,7 +83,7 @@
                 <h3>Ameaças Digitais</h3>
                 <p>Conheça os principais riscos virtuais.</p>
             </div>
-            <a href="#" class="botao-aula">▶ Iniciar</a>
+            <a href="../html/intermediario2.html" class="botao-aula">▶ Iniciar</a>
         </article>
 
         <hr>
@@ -122,6 +121,22 @@
     </section>
 
 </div>
+<script>
+  window.onload = function() {
+    let concluidas = parseInt(localStorage.getItem('aulas_concluidas') || '0');
+    let total = 6;
+    let percentagem = Math.round((concluidas / total) * 100);
+    
+    // Se passar de 100%, limita a 100
+    if (percentagem > 100) percentagem = 100;
+
+    let barra = document.getElementById('progress-bar');
+    let texto = document.getElementById('progress-text');
+
+    if (barra) barra.style.width = percentagem + '%';
+    if (texto) texto.textContent = percentagem + '% Completos';
+  };
+</script>
 
 </body>
 </html>

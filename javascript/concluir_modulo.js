@@ -1,41 +1,60 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // IMPORTANTE: Esta linha limpa o valor antigo preso no navegador (pode apagá-la após testar a primeira vez)
-    // localStorage.clear(); 
+  const input = document.getElementById('password-input');
+  
+  // Só executa o código do testador se o input existir na página atual!
+  if (input) {
+    const meter = document.getElementById('meter-bar');
+    const feedback = document.getElementById('feedback');
 
-    const barra = document.getElementById('progress-bar');
-    const texto = document.getElementById('progress-text');
-    const TOTAL_AULAS_CURSO = 6; // Total exato de aulas do curso
+    input.addEventListener('input', () => {
+      const val = input.value;
+      let score = 0;
 
-    // 1. Atualiza a barra automaticamente ao carregar a página de início
-    if (barra && texto) {
-        const aulasConcluidas = parseInt(localStorage.getItem('aulas_concluidas') || '0');
-        // Calcula a percentagem real com base no número de aulas concluídas (1 aula = ~17%, 6 aulas = 100%)
-        const porcentagem = Math.round((aulasConcluidas / TOTAL_AULAS_CURSO) * 100);
-        
-        barra.style.width = porcentagem + '%';
-        texto.textContent = porcentagem + '% Completos';
-    }
+      if (!val) {
+        if (meter) meter.style.width = '0%';
+        if (feedback) feedback.innerText = 'Aguardando senha...';
+        return;
+      }
 
-    // 2. Quando o aluno clica no botão de concluir a aula
-    const btnConcluirModulo = document.getElementById('btn-concluir-modulo');
-    
-    if (btnConcluirModulo) {
-        btnConcluirModulo.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            let aulasConcluidas = parseInt(localStorage.getItem('aulas_concluidas') || '0');
-            
-            // Só soma se ainda não concluiu todas as aulas do curso
-            if (aulasConcluidas < TOTAL_AULAS_CURSO) {
-                aulasConcluidas += 1; // Soma exatamente +1 aula
-                localStorage.setItem('aulas_concluidas', aulasConcluidas);
-                
-                alert('Aula concluída com sucesso!');
-                window.location.href = 'inicio.html'; // Redireciona para o início
-            } else {
-                alert('Já concluiu todas as aulas deste curso!');
-                window.location.href = 'inicio.html';
-            }
-        });
-    }
+      if (val.length >= 8) score += 20;
+      if (val.length >= 12) score += 20;
+      if (/[A-Z]/.test(val)) score += 20;
+      if (/[0-9]/.test(val)) score += 20;
+      if (/[^A-Za-z0-9]/.test(val)) score += 20;
+
+      if (meter) meter.style.width = score + '%';
+
+      if (feedback) {
+        if (score <= 40) {
+          meter.style.backgroundColor = '#ef4444';
+          feedback.innerText = 'Senha Fraca: Curta ou previsível.';
+        } else if (score <= 80) {
+          meter.style.backgroundColor = '#eab308';
+          feedback.innerText = 'Senha Média: Adicione mais caracteres ou símbolos.';
+        } else {
+          meter.style.backgroundColor = '#00f5d4';
+          feedback.innerText = 'Senha Forte: Boa extensão e diversidade de caracteres!';
+        }
+      }
+    });
+  }
+
+  // Lógica do botão de concluir (só corre se o botão existir na página)
+  const btnConcluirModulo = document.getElementById('btn-concluir-modulo');
+  const TOTAL_AULAS_CURSO = 6; 
+
+  if (btnConcluirModulo) {
+    btnConcluirModulo.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      let aulasConcluidas = parseInt(localStorage.getItem('aulas_concluidas') || '0');
+      
+      if (aulasConcluidas < TOTAL_AULAS_CURSO) {
+        aulasConcluidas += 1;
+        localStorage.setItem('aulas_concluidas', aulasConcluidas);
+      }
+      
+      window.location.href = 'inicio.html';
+    });
+  }
 });

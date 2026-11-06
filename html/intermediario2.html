@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios: Senhas e Proteção de Contas</title>
+  <link rel="stylesheet" href="../CSS/intermediario1.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <span class="badge">Nível Intermediário • Exercícios da Aula 3</span>
+        <h1>Fixação de Conteúdo</h1>
+      </div>
+      <a href="../html/intermediario1.html" class="nav-btn secondary">← Voltar à Aula</a>
+    </header>
+
+    <!-- Questão 1 -->
+    <div class="card question-card">
+      <p class="question-title">1. Qual é o fator mais importante e determinante para garantir a resistência de uma senha contra ataques de força bruta?</p>
+      <div class="options-group">
+        <label class="option-label">
+          <input type="radio" name="q1" value="a"> Apenas o uso obrigatório de letras maiúsculas.
+        </label>
+        <label class="option-label">
+          <input type="radio" name="q1" value="b"> O comprimento total da senha (quantidade de caracteres).
+        </label>
+        <label class="option-label">
+          <input type="radio" name="q1" value="c"> Mudar a senha todos os dias.
+        </label>
+        <label class="option-label">
+          <input type="radio" name="q1" value="d"> Utilizar apenas números e símbolos especiais.
+        </label>
+      </div>
+      <button class="check-btn" onclick="verificarQuestao(1, 'b')">Verificar Resposta</button>
+      <div id="result-q1" class="result-msg"></div>
+    </div>
+
+    <!-- Questão 2 -->
+    <div class="card question-card">
+      <p class="question-title">2. O que caracteriza uma "Passphrase" (Frase de Acesso) recomendada para segurança?</p>
+      <div class="options-group">
+        <label class="option-label">
+          <input type="radio" name="q2" value="a"> Uma sequência curta de números fáceis de lembrar, como a data de nascimento.
+        </label>
+        <label class="option-label">
+          <input type="radio" name="q2" value="b"> Uma única palavra complexa encontrada no dicionário.
+        </label>
+        <label class="option-label">
+          <input type="radio" name="q2" value="c"> Uma frase longa composta por várias palavras combinadas, fáceis de memorizar e difíceis de quebrar.
+        </label>
+        <label class="option-label">
+          <input type="radio" name="q2" value="d"> O mesmo PIN utilizado no cartão de crédito.
+        </label>
+      </div>
+      <button class="check-btn" onclick="verificarQuestao(2, 'c')">Verificar Resposta</button>
+      <div id="result-q2" class="result-msg"></div>
+    </div>
+
+    <!-- Questão 3 -->
+    <div class="card question-card">
+      <p class="question-title">3. Por que razão a reutilização de senhas em múltiplos sites representa um risco crítico de segurança?</p>
+      <div class="options-group">
+        <label class="option-label">
+          <input type="radio" name="q3" value="a"> Porque os navegadores deixam de salvar as senhas automaticamente.
+        </label>
+        <label class="option-label">
+          <input type="radio" name="q3" value="b"> Se um único serviço menor for comprometido, todas as outras contas com a mesma combinação ficam vulneráveis.
+        </label>
+        <label class="option-label">
+          <input type="radio" name="q3" value="c"> Aumenta o consumo de memória RAM do computador.
+        </label>
+        <label class="option-label">
+          <input type="radio" name="q3" value="d"> Não há risco se utilizar números pares.
+        </label>
+      </div>
+      <button class="check-btn" onclick="verificarQuestao(3, 'b')">Verificar Resposta</button>
+      <div id="result-q3" class="result-msg"></div>
+    </div>
+
+    <!-- Navegação Inferior -->
+    <div class="footer-navegacao">
+      <a href="../html/intermediario1.html" class="nav-btn secondary">← Aula Anterior</a>
+      <a href="../html/inicio.html" id="btn-concluir-modulo" class="nav-btn">Concluir Módulo →</a>
+    </div>
+  </div>
+
+  <script>
+    // 1. Função para verificar as respostas dos exercícios
+    function verificarQuestao(numQuestao, respostaCorreta) {
+      const opcoes = document.getElementsByName('q' + numQuestao);
+      let selecionada = null;
+
+      for (const op of opcoes) {
+        if (op.checked) {
+          selecionada = op.value;
+          break;
+        }
+      }
+
+      const msgDiv = document.getElementById('result-q' + numQuestao);
+      if (!msgDiv) return;
+
+      if (!selecionada) {
+        msgDiv.innerText = 'Por favor, selecione uma alternativa.';
+        msgDiv.className = 'result-msg incorrect';
+        return;
+      }
+
+      if (selecionada === respostaCorreta) {
+        msgDiv.innerText = 'Resposta correta! Excelente trabalho.';
+        msgDiv.className = 'result-msg correct';
+      } else {
+        msgDiv.innerText = 'Resposta incorreta. Tente novamente!';
+        msgDiv.className = 'result-msg incorrect';
+      }
+    }
+
+    // 2. Lógica do Botão de Concluir Módulo (Soma o progresso ao clicar)
+    document.addEventListener('DOMContentLoaded', () => {
+      const btnConcluirModulo = document.getElementById('btn-concluir-modulo');
+      const TOTAL_AULAS_CURSO = 6; 
+
+      if (btnConcluirModulo) {
+        btnConcluirModulo.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          let aulasConcluidas = parseInt(localStorage.getItem('aulas_concluidas') || '0');
+          
+          if (aulasConcluidas < TOTAL_AULAS_CURSO) {
+            aulasConcluidas += 1;
+            localStorage.setItem('aulas_concluidas', aulasConcluidas);
+          }
+          
+          window.location.href = btnConcluirModulo.getAttribute('href');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

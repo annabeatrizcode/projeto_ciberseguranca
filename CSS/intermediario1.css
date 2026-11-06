@@ -207,8 +207,20 @@ button.check-btn {
 
 .correct { color: #00f5d4; }
 .incorrect { color: #ef4444; }
-.nav-btn.bottom-right {
+
+/* Alinhamento correto do botão para a direita */
+.container-botao {
   display: flex;
-  margin-left: auto;
-  width: fit-content;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 20px 0;
+}
+/* Navegação Inferior das Aulas/Exercícios */
+.footer-navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }
