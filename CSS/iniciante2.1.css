@@ -1,0 +1,167 @@
+
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d1117;
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 40px 20px;
+}
+
+.container-aula {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Topo e Navegação (Correção da cor dos links para evitar o azul) */
+.navegacao-topo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-voltar, 
+.btn-anterior {
+    color: #c9d1d9 !important; /* Texto limpo (sem azul padrão) */
+    text-decoration: none !important;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.link-voltar:hover, 
+.btn-anterior:hover {
+    color: #58a6ff !important; /* Azul claro apenas ao passar o rato */
+    text-decoration: underline !important;
+}
+
+.tag-nivel {
+    color: #8b949e;
+    font-size: 0.95rem;
+}
+
+/* Títulos */
+.titulo-aula {
+    color: #f0f6fc;
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+.subtitulo-aula {
+    color: #8b949e;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Cartões de Conteúdo */
+.card-modulo {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 24px 30px;
+    margin-bottom: 24px;
+}
+
+.titulo-exercicios {
+    color: #f0f6fc;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.questao-bloco {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #30363d;
+}
+
+.questao-titulo {
+    color: #58a6ff;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.questao-cenario {
+    color: #8b949e;
+    font-style: italic;
+    margin-bottom: 10px;
+    background: #0d1117;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border-left: 3px solid #38bdf8;
+}
+
+.questao-pergunta {
+    color: #f0f6fc;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Organização vertical das opções em caixas */
+.opcoes-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.opcao-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 12px 16px;
+    cursor: pointer;
+    color: #c9d1d9;
+    transition: border-color 0.2s ease;
+}
+
+.opcao-item:hover {
+    border-color: #58a6ff;
+}
+
+.opcao-item input[type="radio"] {
+    accent-color: #38bdf8;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+/* Rodapé e Botão de Conclusão (Garantindo fundo verde e texto branco) */
+.rodape-navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #30363d;
+}
+
+.botao-concluir {
+    background-color: #238636 !important; /* Fundo verde do botão */
+    color: #ffffff !important;             /* Texto branco forçado */
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 1.05rem;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.botao-concluir:hover {
+    background-color: #2ea043 !important;
+}

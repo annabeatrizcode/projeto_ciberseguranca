@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
     <link rel="stylesheet" href="../CSS/inicio.css">
+ <!-- Se a pasta se chamar "javascript" com 'j' minúsculo: -->
+<script src="../javascript/concluir_modulo.js" defer></script>                                                                                                
+
 </head>
 <body>
     
@@ -18,24 +21,29 @@
         <h3>Aprender Cibersegurança</h3>
 
         <div class="menu-lateral">
-            <a href="#iniciante">Nível Iniciante <span>▶</span></a>
-            <a href="#intermediario">Nível Intermediário <span>▶</span></a>
-            <a href="#avancado">Nível Avançado <span>▶</span></a>
+            <a href="../html/iniciante1.html">Nível Iniciante <span>▶</span></a>
+            <a href="../html/intermediario1.html">Nível Intermediário <span>▶</span></a>
+            <a href="../html/avancado1.html">Nível Avançado <span>▶</span></a>
+            <a href="../html/index.html">voltar <span></span></a>
+            <a href="../html/login.html">Área do Aluno <span></span></a>
         </div>
     </aside>
 
     <section class="area-cursos">
 
-        <h2>Meu aprendizado</h2>
+    <h2>Meu aprendizado</h2>
 
-        <div class="progresso">
-            <div class="barra">
-                <div class="barra-preenchida"></div>
-            </div>
-            <strong>0% Completos</strong>
+    <!-- COLOQUE AQUI -->
+    <div class="progresso">
+        <div class="barra">
+            <div class="barra-preenchida" id="progress-bar"></div>
         </div>
+        <strong id="progress-text">0% Completos</strong>
+    </div>
 
-        <hr>
+    <hr>
+
+    <!-- Restante dos módulos... -->
 
         <h2 id="iniciante">Nível Iniciante</h2>
 
@@ -54,7 +62,7 @@
                 <h3>Segurança na Internet</h3>
                 <p>Aprenda a navegar com segurança.</p>
             </div>
-            <a href="#" class="botao-aula">▶ Iniciar</a>
+            <a href="../html/iniciante2.html" class="botao-aula">▶ Iniciar</a>
         </article>
 
         <hr>
@@ -100,11 +108,16 @@
             </div>
             <a href="#" class="botao-aula">▶ Iniciar</a>
         </article>
-
-        <section class="certificado" id="certificado">
-            <h2>🏆 Certificado</h2>
-            <p>Conclua os módulos para receber seu certificado.</p>
-        </section>
+<div class="certificate-section">
+    <div class="certificate-info">
+        <h3>🏆 Certificado</h3>
+        <p>Acesse aqui os certificados dos módulos concluídos.</p>
+    </div>
+    <div class="certificate-buttons">
+        <a href="../html/certificado1.html" class="btn-cert">Certificado Módulo 1</a>
+        <a href="../html/certificado2.html" class="btn-cert">Certificado Módulo 2</a>
+    </div>
+</div>
 
     </section>
 

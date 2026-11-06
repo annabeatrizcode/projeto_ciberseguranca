@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aula 1: Introdução à Cibersegurança</title>
   <link rel="stylesheet" href="../CSS/iniciante1.css">
+  <script src="../javascript/concluir_modulo.js" defer></script>
 </head>
 <body>
 
   <!-- Cabeçalho / Navegação -->
   <header class="navbar">
-    <a href="#" class="back-link">&larr; Voltar aos Cursos</a>
+    <a href="../html/inicio.html" class="back-link">&larr; Voltar aos Cursos</a>
     <span class="lesson-tag">Nível Iniciante • Aula 1</span>
   </header>
 
@@ -107,8 +108,35 @@
     </section>
 
   </main>
+<div style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
+    <a href="#" id="btn-concluir-modulo" class="botao-concluir" style="padding: 12px 24px; background: #4f46e5; color: white; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: bold;">Concluir Aula 1 →</a>
+</div>
+<!-- Botão para resetar o progresso -->
+<button type="button" id="btn-reset-progresso" onclick="resetarTudoProZero()">
+  Reiniciar Progresso
+</button>
 
+<script>
+  function resetarTudoProZero() {
+    // 1. Limpa o armazenamento do navegador para zerar o progresso salvo
+    localStorage.clear();
 
+    // 2. Procura a barra e força a largura para 0%
+    const barra = document.querySelector('.progress-bar');
+    if (barra) {
+      barra.style.setProperty('width', '0%', 'important');
+    }
+
+    // 3. Atualiza o texto visual de porcentagem (se houver)
+    const textoProgresso = document.querySelector('span');
+    if (textoProgresso && textoProgresso.innerText.includes('%')) {
+      textoProgresso.innerText = '0% Completos';
+    }
+
+    // 4. Recarrega a página para aplicar todas as mudanças
+    window.location.reload();
+  }
+</script>
   
 </body>
 </html>

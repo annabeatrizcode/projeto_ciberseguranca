@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula: Senhas e Proteção de Contas</title>
+  <link rel="stylesheet" href="../CSS/intermediario1.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <span class="badge">Nível Intermediário • Aula 3</span>
+        <h1>Senhas e Proteção de Contas</h1>
+      </div>
+     
+    </header>
+
+    <div class="card">
+      <h2>1. Anatomia de uma Senha Forte</h2>
+      <p>Uma senha segura deve ser difícil de adivinhar tanto por seres humanos quanto por ataques automatizados de força bruta (brute-force).</p>
+      <ul>
+        <li><strong>Comprimento Mínimo:</strong> Pelo menos 12 a 16 caracteres. O comprimento é o fator principal de resistência.</li>
+        <li><strong>Complexidade:</strong> Mistura de letras maiúsculas, minúsculas, números e símbolos (ex: <code>@, #, $, !</code>).</li>
+        <li><strong>Passphrases (Frases de Acesso):</strong> Em vez de senhas curtas, use frases como <code>Cafe!Gelado#Manha2026</code>. São fáceis de memorizar e extremamente difíceis de quebrar.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>2. Práticas Essenciais de Segurança</h2>
+      <ul>
+        <li><strong>Autenticação de Dois Fatores (2FA/MFA):</strong> Adiciona uma camada extra de proteção além da senha, exigindo um código via aplicativo autenticador ou chave física.</li>
+        <li><strong>Gestores de Senhas:</strong> Ferramentas que geram e armazenam senhas complexas e únicas para cada serviço de forma criptografada.</li>
+        <li><strong>Não Reutilização:</strong> Nunca utilize a mesma combinação de email e senha em múltiplos sites. Se um serviço for comprometido, todas as tuas contas ficam vulneráveis.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>3. Testador Prático de Força de Senha</h2>
+      <p>Digite uma senha abaixo para analisar a sua complexidade segundo os critérios de segurança:</p>
+      <div class="tool-box">
+        <label for="password-input">Digite uma senha de teste:</label>
+        <input type="text" id="password-input" placeholder="Ex: C@fe!Gelado2026">
+        <div class="meter-container">
+          <div id="meter-bar" class="meter-bar"></div>
+        </div>
+        <div id="feedback" class="feedback">Aguardando senha...</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const input = document.getElementById('password-input');
+    const meter = document.getElementById('meter-bar');
+    const feedback = document.getElementById('feedback');
+
+    input.addEventListener('input', () => {
+      const val = input.value;
+      let score = 0;
+
+      if (!val) {
+        meter.style.width = '0%';
+        feedback.innerText = 'Aguardando senha...';
+        return;
+      }
+
+      if (val.length >= 8) score += 20;
+      if (val.length >= 12) score += 20;
+      if (/[A-Z]/.test(val)) score += 20;
+      if (/[0-9]/.test(val)) score += 20;
+      if (/[^A-Za-z0-9]/.test(val)) score += 20;
+
+      meter.style.width = score + '%';
+
+      if (score <= 40) {
+        meter.style.backgroundColor = '#ef4444';
+        feedback.innerText = 'Senha Fraca: Curta ou previsível.';
+      } else if (score <= 80) {
+        meter.style.backgroundColor = '#eab308';
+        feedback.innerText = 'Senha Média: Adicione mais caracteres ou símbolos.';
+      } else {
+        meter.style.backgroundColor = '#00f5d4';
+        feedback.innerText = 'Senha Forte: Boa extensão e diversidade de caracteres!';
+      }
+    });
+
+  </script>
+  
+  <a href="exercicios-senhas.html" class="nav-btn">Ir para Exercícios →</a>
+
+</body>
+</html>
