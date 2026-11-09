@@ -3,93 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercícios da Aula 6: Proteção de Dados</title> 
+  <title>Exercícios Práticos: Proteção de Dados</title>
   <link rel="stylesheet" href="../CSS/avancado2.css">
-  <script src="../javascript/avancado2.js" defer></script>
 </head>
 <body>
 
-  <div class="lesson-container">
-
-    <header class="lesson-header">
+  <div class="container">
+    
+    <!-- Cabeçalho -->
+    <div class="header-card">
       <span class="badge">Módulo 6 • Nível Avançado</span>
       <h1>Exercícios Práticos: Proteção de Dados</h1>
-      <p class="subtitle">Teste os seus conhecimentos sobre privacidade, conformidade e leis de proteção de dados.</p>
-    </header>
+      <p>Teste os seus conhecimentos sobre privacidade, conformidade e leis de proteção de dados.</p>
+    </div>
 
-    <!-- Lista de Exercícios / Quiz -->
-    <main class="lesson-content">
+    <!-- Questão 1 -->
+    <div class="question-card" data-question="q1">
+      <h2 class="question-title">Questão 1: O que é a LGPD / GDPR?</h2>
+      <p class="question-description">Qual é o principal objetivo das regulamentações globais de proteção de dados, como a LGPD no Brasil e o GDPR na Europa?</p>
       
-      <!-- Pergunta 1 -->
-      <section class="card" id="block-q1">
-        <h2>Questão 1: O que é a LGPD / GDPR?</h2>
-        <p class="question-text">Qual é o principal objetivo das regulamentações globais de proteção de dados, como a LGPD no Brasil e o GDPR na Europa?</p>
-        <ul class="options-list">
-          <li>
-            <label><input type="radio" name="q1" value="a"> A) Impedir totalmente que empresas recolham qualquer tipo de informação na internet.</label>
-          </li>
-          <li>
-            <label><input type="radio" name="q1" value="b"> B) Garantir a privacidade e o controlo dos cidadãos sobre os seus dados pessoais, impondo regras estritas às empresas.</label>
-          </li>
-          <li>
-            <label><input type="radio" name="q1" value="c"> C) Aumentar os custos operacionais das pequenas e médias empresas tecnológicas.</label>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Pergunta 2 -->
-      <section class="card" id="block-q2">
-        <h2>Questão 2: Boas Práticas de Privacidade</h2>
-        <p class="question-text">O que significa o conceito de <em>Privacy by Design</em> (Privacidade desde a Conceção) no desenvolvimento de software?</p>
-        <ul class="options-list">
-          <li>
-            <label><input type="radio" name="q2" value="a"> A) Adicionar avisos de cookies num site apenas após este ser totalmente lançado.</label>
-          </li>
-          <li>
-            <label><input type="radio" name="q2" value="b"> B) Integrar a proteção e a privacidade dos dados desde a fase inicial de projeto e arquitetura de um sistema.</label>
-          </li>
-          <li>
-            <label><input type="radio" name="q2" value="c"> C) Vender dados de utilizadores anonimizados a parceiros comerciais terceiros.</label>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Pergunta 3: Estudo de Caso -->
-      <section class="card example-card" id="block-q3">
-        <h2>💡 Questão Prática (Estudo de Caso)</h2>
-        <p class="question-text">Uma empresa de e-commerce sofreu uma violação de dados e centenas de palavras-passe de clientes foram expostas. De acordo com as leis modernas de proteção de dados, qual deve ser uma das primeiras medidas obrigatórias?</p>
-        <ul class="options-list">
-          <li>
-            <label><input type="radio" name="q3" value="a"> A) Ocultar o incidente do público para evitar danos à reputação da marca.</label>
-          </li>
-          <li>
-            <label><input type="radio" name="q3" value="b"> B) Notificar imediatamente a autoridade nacional de proteção de dados e os titulares afetados dentro do prazo legal estabelecido.</label>
-          </li>
-          <li>
-            <label><input type="radio" name="q3" value="c"> C) Apagar todos os registos do servidor para destruir provas do ataque.</label>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Área de Verificação e Feedback -->
-      <div class="action-area" style="margin-top: 30px; text-align: center;">
-        <button type="button" id="btnVerify" class="action-btn" style="background-color: #0066cc; cursor: pointer;">Verificar Respostas</button>
-        <div id="feedback" class="feedback-message" style="margin-top: 15px; font-weight: bold;"></div>
+      <div class="options-container">
+        <button class="option-btn" data-answer="A">
+          <span class="radio-icon"></span>
+          <span>A) Impedir totalmente que empresas recolham qualquer tipo de informação na internet.</span>
+        </button>
+        <button class="option-btn" data-answer="B">
+          <span class="radio-icon"></span>
+          <span>B) Garantir a privacidade e o controlo dos cidadãos sobre os seus dados pessoais, impondo regras estritas às empresas.</span>
+        </button>
+        <button class="option-btn" data-answer="C">
+          <span class="radio-icon"></span>
+          <span>C) Aumentar os custos operacionais das pequenas e médias empresas tecnológicas.</span>
+        </button>
       </div>
+    </div>
 
-    </main>
-
-    <!-- Navegação / Ações -->
-    <footer class="actions-container" style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px;">
-      <a href="../html/avancado1.html" class="action-btn">← Voltar a aula</a>
+    <!-- Questão 2 -->
+    <div class="question-card" data-question="q2">
+      <h2 class="question-title">Questão 2: Boas Práticas de Privacidade</h2>
+      <p class="question-description">O que significa o conceito de <em>Privacy by Design</em> (Privacidade desde a Concepção) no desenvolvimento de software?</p>
       
-      <div style="display: flex; gap: 10px;">
-        <button type="button" id="btnComplete" class="action-btn" style="background-color: #1e293b; cursor: pointer;">Concluir Módulo 6</button>
-        <a href="../html/certificado_completo.html" id="btnCertificate" class="action-btn btn-next" style="opacity: 0.5; pointer-events: none;">Ver Certificado Final →</a>
+      <div class="options-container">
+        <button class="option-btn" data-answer="A">
+          <span class="radio-icon"></span>
+          <span>A) Adicionar avisos de cookies num site apenas após este ser totalmente lançado.</span>
+        </button>
+        <button class="option-btn" data-answer="B">
+          <span class="radio-icon"></span>
+          <span>B) Integrar a proteção e a privacidade dos dados desde a fase inicial de projeto e arquitetura de um sistema.</span>
+        </button>
+        <button class="option-btn" data-answer="C">
+          <span class="radio-icon"></span>
+          <span>C) Vender dados de utilizadores anonimizados a parceiros comerciais terceiros.</span>
+        </button>
       </div>
-    </footer>
+    </div>
+
+    <!-- Questão 3 -->
+    <div class="question-card" data-question="q3">
+      <h2 class="question-title">💡 Questão Prática (Estudo de Caso)</h2>
+      <p class="question-description">Uma empresa de e-commerce sofreu uma violação de dados e centenas de palavras-passe de clientes foram expostas. De acordo com as leis modernas de proteção de dados, qual deve ser uma das primeiras medidas obrigatórias?</p>
+      
+      <div class="options-container">
+        <button class="option-btn" data-answer="A">
+          <span class="radio-icon"></span>
+          <span>A) Ocultar o incidente do público para evitar danos à reputação da marca.</span>
+        </button>
+        <button class="option-btn" data-answer="B">
+          <span class="radio-icon"></span>
+          <span>B) Notificar imediatamente a autoridade nacional de proteção de dados e os titulares afetados dentro do prazo legal estabelecido.</span>
+        </button>
+        <button class="option-btn" data-answer="C">
+          <span class="radio-icon"></span>
+          <span>C) Apagar todos os registos do servidor para destruir provas do ataque.</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Botões de Navegação -->
+    <div class="navigation-actions">
+      <a href="../html/inicio.html" id="backBtn" class="nav-btn btn-back">← Voltar ao Módulo</a>
+      <button id="finishBtn" class="nav-btn btn-finish">Concluir Módulo ✓</button>
+    </div>
 
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const correctAnswers = {
+        q1: 'B',
+        q2: 'B',
+        q3: 'B'
+      };
+
+      const questionCards = document.querySelectorAll('.question-card');
+
+      questionCards.forEach(card => {
+        const questionKey = card.getAttribute('data-question');
+        const buttons = card.querySelectorAll('.option-btn');
+
+        buttons.forEach(button => {
+          button.addEventListener('click', () => {
+            const selectedAnswer = button.getAttribute('data-answer');
+
+            // Limpa qualquer cor anterior antes de aplicar a nova
+            buttons.forEach(btn => btn.classList.remove('correct', 'incorrect'));
+
+            if (selectedAnswer === correctAnswers[questionKey]) {
+              button.classList.add('correct');
+            } else {
+              button.classList.add('incorrect');
+              const correctBtn = card.querySelector(`[data-answer="${correctAnswers[questionKey]}"]`);
+              if (correctBtn) correctBtn.classList.add('correct');
+            }
+          });
+        });
+      });
+
+      // Ação do Botão Concluir Módulo
+      const finishBtn = document.getElementById('finishBtn');
+      if (finishBtn) {
+        finishBtn.addEventListener('click', () => {
+          sessionStorage.setItem('CyberSec_Module6_Completed', 'true');
+          alert('Módulo concluído com sucesso!');
+          window.location.href = '../html/inicio.html';
+        });
+      }
+
+      // Ação do Botão Voltar (segue o link definido no href)
+      const backBtn = document.getElementById('backBtn');
+      if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+          // Permite que o link navegue normalmente para ../html/inicio.html
+        });
+      }
+    });
+  </script>
 </body>
 </html>
