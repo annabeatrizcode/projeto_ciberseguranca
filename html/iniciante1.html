@@ -9,15 +9,16 @@
 </head>
 <body>
 
-  <!-- Cabeçalho / Navegação -->
-  <header class="navbar">
-    <a href="../html/inicio.html" class="back-link">&larr; Voltar aos Cursos</a>
-    <span class="lesson-tag">Nível Iniciante • Aula 1</span>
+<h1>Introdução à Cibersegurança</h1>
+<p class="subtitle">Conheça os fundamentos essenciais da proteção no ambiente digital.</p>
+  <header class="main-header">
+    <h1>Cyber<span style="color: #38bdf8;">Sec</span></h1>
   </header>
+  <a href="../html/inicio.html" class="btn-voltar">← Voltar</a>
 
   <main class="container">
     
-    <!-- Hero da Aula -->
+    
     <section class="lesson-header">
       <h1>Introdução à Cibersegurança</h1>
       <p class="subtitle">Conheça os fundamentos essenciais da proteção no ambiente digital.</p>
@@ -116,27 +117,5 @@
   Reiniciar Progresso
 </button>
 
-<script>
-  function resetarTudoProZero() {
-    // 1. Limpa o armazenamento do navegador para zerar o progresso salvo
-    localStorage.clear();
-
-    // 2. Procura a barra e força a largura para 0%
-    const barra = document.querySelector('.progress-bar');
-    if (barra) {
-      barra.style.setProperty('width', '0%', 'important');
-    }
-
-    // 3. Atualiza o texto visual de porcentagem (se houver)
-    const textoProgresso = document.querySelector('span');
-    if (textoProgresso && textoProgresso.innerText.includes('%')) {
-      textoProgresso.innerText = '0% Completos';
-    }
-
-    // 4. Recarrega a página para aplicar todas as mudanças
-    window.location.reload();
-  }
-</script>
-  
 </body>
 </html>

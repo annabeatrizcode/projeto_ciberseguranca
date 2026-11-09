@@ -4,76 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercícios de Conclusão - Módulo 1</title>
-    <!-- Ligação ao CSS específico -->
+    <!-- Ligação ao CSS externo -->
     <link rel="stylesheet" href="../CSS/iniciante2.1.css">
-    
-    <script src="../javascript/concluir_modulo.js" defer></script>
+    <script src="../javascript/inicio.js" defer></script>
 </head>
 <body>
+    <header class="main-header">
+        <h1>Cyber<span style="color: #38bdf8;">Sec</span></h1>
+    </header>
 
     <div class="container-aula">
-        
-      
         <div class="navegacao-topo">
-            <a href="inicio.html" class="link-voltar">← Voltar aos Cursos</a>
+            <a href="inicio.html" class="link-voltar">← Voltar</a>
         </div>
-            <span class="tag-nivel">Nível Iniciante • Avaliação Final</span>
-      
+        
+        <h1 class="titulo-aula">Introdução à Cibersegurança</h1>
+        <p class="subtitulo-aula">Conheça os fundamentos essenciais da proteção no ambiente digital.</p>
 
-        <h1 class="titulo-aula">Exercícios Práticos de Fixação</h1>
-        <p class="subtitulo-aula">Valide os seus conhecimentos para concluir com sucesso este módulo de Cibersegurança.</p>
-
-       
         <div class="card-modulo">
-            <h2 class="titulo-exercicios">🛠 Questões do Módulo</h2>
-            <p>Responda às questões abaixo para consolidar a matéria estudada.</p>
+            <h2 class="titulo-exercicios">🛠 Exercícios Práticos: Mão na Massa</h2>
+            <p>Responda às duas questões abaixo para validar o seu conhecimento sobre os conceitos base de cibersegurança.</p>
 
-           
+            <!-- Questão 1 -->
             <div class="questao-bloco">
-                <div class="questao-titulo">1. Estudo de Caso — Segurança de Senhas:</div>
-                <div class="questao-cenario">"Um utilizador usa a mesma senha simples ('123456') no seu e-mail pessoal, nas redes sociais e no site de compras online."</div>
-                <div class="questao-pergunta">Qual é o principal risco desta prática?</div>
+                <div class="questao-titulo">1. Estudo de Caso — Alteração Indevida:</div>
+                <div class="questao-cenario">"Um invasor conseguiu aceder ao sistema de uma empresa e alterou os relatórios financeiros de um projeto, fazendo com que os dados exibidos ficassem incorretos."</div>
+                <div class="questao-pergunta">Qual pilar da Tríade CIA foi diretamente violado?</div>
                 
                 <div class="opcoes-grupo">
                     <label class="opcao-item">
-                        <input type="radio" name="q1" value="a"> A página web vai carregar mais devagar.
+                        <input type="radio" name="q1" value="a"> Confidencialidade
                     </label>
                     <label class="opcao-item">
-                        <input type="radio" name="q1" value="b"> Se uma das contas for comprometida, todas as outras também ficam vulneráveis.
+                        <input type="radio" name="q1" value="b"> Disponibilidade
                     </label>
                     <label class="opcao-item">
-                        <input type="radio" name="q1" value="c"> Não existe risco se a senha tiver números.
+                        <input type="radio" name="q1" value="c"> Integridade
                     </label>
                 </div>
             </div>
 
-      
+            <!-- Questão 2 -->
             <div class="questao-bloco">
-                <div class="questao-titulo">2. Estudo de Caso — Engenharia Social e Phishing:</div>
-                <div class="questao-cenario">"Recebeu um e-mail com o logótipo do seu banco a avisar que a sua conta vai ser bloqueada e a exigir que clique num link para atualizar os dados urgentemente."</div>
-                <div class="questao-pergunta">Qual deve ser a sua reação recomendada?</div>
+                <div class="questao-titulo">2. Estudo de Caso — Fator Humano:</div>
+                <div class="questao-cenario">"Recebeu uma mensagem urgente do seu suposto superior a solicitar o envio imediato da sua palavra-passe para aceder ao servidor de ficheiros."</div>
+                <div class="questao-pergunta">Qual é a técnica de ataque aplicada nesta situação?</div>
 
                 <div class="opcoes-grupo">
                     <label class="opcao-item">
-                        <input type="radio" name="q2" value="a"> Clicar imediatamente no link para evitar o bloqueio.
+                        <input type="radio" name="q2" value="a"> Ataque de Força Bruta
                     </label>
                     <label class="opcao-item">
-                        <input type="radio" name="q2" value="b"> Partilhar o link com os amigos nas redes sociais.
+                        <input type="radio" name="q2" value="b"> Engenharia Social
                     </label>
                     <label class="opcao-item">
-                        <input type="radio" name="q2" value="c"> Desconfiar, não clicar no link e verificar a situação diretamente na aplicação oficial do banco.
+                        <input type="radio" name="q2" value="c"> Negação de Serviço (DDoS)
                     </label>
                 </div>
             </div>
         </div>
 
-     
-        <div class="rodape-navegacao">
-            <a href="iniciante2.html" class="btn-anterior">← Aula Anterior</a>
-            <a href="../html/certificado2.html" id="btn-concluir-modulo" class="botao-concluir">Concluir Módulo →</a>
+        <!-- BOTÕES EM BAIXO -->
+        <div class="bloco-acoes-inferiores">
+            <button type="button" id="btnVerificar" class="btn-verificar">Verificar Respostas</button>
+            <div id="feedbackConclusao" style="text-align: center; font-weight: 500; font-size: 0.9rem;"></div>
+            
+            <div class="rodape-navegacao-dupla">
+                <button type="button" id="btnConcluirModulo" class="btn-concluir-aula">Concluir Módulo ✓</button>
+                </button>
+                <a href="../html/inicio.html" class="btn-proximo">Próximo Módulo →</a>
+            </div>
         </div>
-
     </div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const numeroDoModulo = 1; // Ajustar para 2 ou 3 em cada página correspondente
+    const btnConcluir = document.getElementById('btnConcluirModulo');
+    const feedback = document.getElementById('feedbackConclusao');
 
+    if (btnConcluir) {
+        // Estado inicial se já tiver sido concluído previamente
+        if (localStorage.getItem(`cybersec_modulo${numeroDoModulo}_completed`) === 'true') {
+            btnConcluir.style.backgroundColor = '#22c55e';
+            btnConcluir.style.color = '#080c14';
+            btnConcluir.textContent = 'Módulo Concluído ✓';
+        }
+
+        btnConcluir.addEventListener('click', () => {
+            // Guarda o estado individual e atualiza o último módulo
+            localStorage.setItem(`cybersec_modulo${numeroDoModulo}_completed`, 'true');
+            localStorage.setItem('cybersec_ultimo_modulo', numeroDoModulo);
+
+            // Atualiza o feedback visual do botão
+            btnConcluir.style.backgroundColor = '#22c55e';
+            btnConcluir.style.color = '#080c14';
+            btnConcluir.textContent = 'Módulo Concluído ✓';
+
+            if (feedback) {
+                feedback.style.color = '#22c55e';
+                feedback.textContent = `✅ Módulo ${numeroDoModulo} concluído com sucesso!`;
+            }
+        });
+    }
+});
+</script>   
 </body>
 </html>

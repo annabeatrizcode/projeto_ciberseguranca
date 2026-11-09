@@ -1,81 +1,123 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 1: Introdução à Cibersegurança</title>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSec - Exercícios Práticos</title>
+    
     <link rel="stylesheet" href="../CSS/iniciante1.2.css">
-    <script src="../javascript/concluir_modulo.js" defer></script>
+    <!-- O script agora está separado num ficheiro JS dedicado -->
+    <script src="../javascript/iniciante1.2.js" defer></script>
 </head>
-  <body>
+<body>
+    <header class="main-header">
+        <h1>Cyber<span style="color: #38bdf8;">Sec</span></h1>
+    </header>
 
-<!-- Exercícios Práticos Integrados -->
-<article class="card exercise-card">
-  <h2>🛠️ Exercícios Práticos: Mão na Massa</h2>
-  <p>Responda às duas questões abaixo para validar o seu conhecimento sobre os conceitos base de cibersegurança.</p>
+    <main class="container">
+        <!-- Botão de Voltar colocado no topo, antes do cabeçalho da aula -->
+        <a href="index.html" class="btn-voltar">← Voltar</a>
 
-  <!-- Questão 1 -->
-  <div class="exercise-group">
-    <p><strong>1. Estudo de Caso — Alteração Indevida:</strong></p>
-    <p class="subtitle-text">
-      <em>"Um invasor conseguiu aceder ao sistema de uma empresa e alterou os relatórios financeiros de um projeto, fazendo com que os dados exibidos ficassem incorretos."</em>
-    </p>
-    <p class="quiz-question">Qual pilar da Tríade CIA foi diretamente violado?</p>
-    
-    <div class="quiz-options">
-      <label class="option">
-        <input type="radio" name="q1" value="a">
-        <span>Confidencialidade</span>
-      </label>
-      <label class="option">
-        <input type="radio" name="q1" value="b">
-        <span>Disponibilidade</span>
-      </label>
-      <label class="option">
-        <input type="radio" name="q1" value="c">
-        <span>Integridade</span>
-      </label>
-    </div>
-  </div>
+        <header class="exercise-header">
+            <h1>Introdução à Cibersegurança</h1>
+            <p class="subtitle">Conheça os fundamentos essenciais da proteção no ambiente digital.</p>
+            <br>
+            <h2>⚒️ Exercícios Práticos: Mão na Massa</h2>
+            <p>Responda às duas questões abaixo para validar o seu conhecimento sobre os conceitos base de cibersegurança.</p>
+        </header>
 
-  <!-- Questão 2 -->
-  <div class="exercise-group">
-    <p><strong>2. Estudo de Caso — Fator Humano:</strong></p>
-    <p class="subtitle-text">
-      <em>"Recebeu uma mensagem urgente do seu suposto superior a solicitar o envio imediato da sua palavra-passe para aceder ao servidor de ficheiros."</em>
-    </p>
-    <p class="quiz-question">Qual é a técnica de ataque aplicada nesta situação?</p>
-    
-    <div class="quiz-options">
-      <label class="option">
-        <input type="radio" name="q2" value="a">
-        <span>Ataque de Força Bruta</span>
-      </label>
-      <label class="option">
-        <input type="radio" name="q2" value="b">
-        <span>Engenharia Social</span>
-      </label>
-      <label class="option">
-        <input type="radio" name="q2" value="c">
-        <span>Negação de Serviço (DDoS)</span>
-      </label>
-    </div>
-  </div>
+        <form id="quizForm">
+            <!-- Questão 1 -->
+            <div class="question-block" id="block-q1">
+                <p class="question-title">1. Estudo de Caso — Alteração Indevida:</p>
+                <blockquote class="case-study">
+                    "Um invasor conseguiu aceder ao sistema de uma empresa e alterou os relatórios financeiros de um projeto, fazendo com que os dados exibidos ficassem incorretos."
+                </blockquote>
+                <p class="question-ask">Qual pilar da Tríade CIA foi diretamente violado?</p>
 
-  <!-- Botão de Verificação -->
-  <button class="btn btn-primary full-width-btn" onclick="validarExercicios()">Verificar Respostas</button>
-  
-  <!-- Contentor de Feedback -->
-  <div id="feedback-geral" class="feedback-container"></div>
+                <div class="options-group">
+                    <label class="option-card">
+                        <input type="radio" name="q1" value="confidencialidade">
+                        <span>Confidencialidade</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="q1" value="disponibilidade">
+                        <span>Disponibilidade</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="q1" value="integridade">
+                        <span>Integridade</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Questão 2 -->
+            <div class="question-block" id="block-q2">
+                <p class="question-title">2. Estudo de Caso — Fator Humano:</p>
+                <blockquote class="case-study">
+                    "Recebeu uma mensagem urgente do seu suposto superior a solicitar o envio imediato da sua palavra-passe para aceder ao servidor de ficheiros."
+                </blockquote>
+                <p class="question-ask">Qual é a técnica de ataque aplicada nesta situação?</p>
+
+                <div class="options-group">
+                    <label class="option-card">
+                        <input type="radio" name="q2" value="forca_bruta">
+                        <span>Ataque de Força Bruta</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="q2" value="engenharia_social">
+                        <span>Engenharia Social</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="q2" value="ddos">
+                        <span>Negação de Serviço (DDoS)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="action-area">
+                <button type="button" id="btnVerify" class="btn btn-primary">Verificar Respostas</button>
+                <div id="feedback" class="feedback-message"></div>
+
+                <div class="navigation-controls">
+                   
+            
+<button type="button" id="btnNextModule" class="btn btn-success" href="../html/iniciante2.html">Próximo Módulo →</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('btnNextModule');
+      
+      // ⚠️ MUDA APENAS ESTE NÚMERO CONSOANTE O MÓDULO (1, 2 ou 3)
+      const meuModulo = 1; 
+
+      if (btn) {
+          // Garante que o botão está clicável
+          btn.removeAttribute('disabled');
+          btn.disabled = false;
+
+          btn.addEventListener('click', () => {
+              // 1. Guarda o progresso do módulo atual
+              localStorage.setItem('cybersec_ultimo_modulo', meuModulo);
+              
+             
+              window.location.href = '../html/iniciante2.html';
+          });
+      }
+  });
+</script>
+                </div>
+            </div>
+        </form>
+    </main>
+       
+    <footer>
+        <p>Desenvolvido por <span>Anna Beatriz</span></p>
+        <p>© 2026 - Todos os direitos reservados.</p>
+    </footer>
 
 
-  <div class="lesson-footer">
-    <a href="../html/iniciante1.html" class="btn btn-secondary">&larr; Voltar para Aula 1</a>
-    <a href="../html/iniciante2.html" class="btn btn-primary">Próxima Aula &rarr;</a>
-  </div>
-</article>
-<div style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
-    <a href="#" id="btn-concluir-modulo" class="botao-concluir" style="padding: 12px 24px; background: #4f46e5; color: white; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: bold;">Concluir Aula 1 →</a>
+
 </div>
-  </body>
+</body>
 </html>

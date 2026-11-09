@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exercícios da Aula 6: Proteção de Dados</title> 
   <link rel="stylesheet" href="../CSS/avancado2.css">
+  <script src="../javascript/avancado2.js" defer></script>
 </head>
 <body>
 
   <div class="lesson-container">
 
-    <!-- Cabeçalho dos Exercícios -->
     <header class="lesson-header">
       <span class="badge">Módulo 6 • Nível Avançado</span>
       <h1>Exercícios Práticos: Proteção de Dados</h1>
@@ -21,7 +21,7 @@
     <main class="lesson-content">
       
       <!-- Pergunta 1 -->
-      <section class="card">
+      <section class="card" id="block-q1">
         <h2>Questão 1: O que é a LGPD / GDPR?</h2>
         <p class="question-text">Qual é o principal objetivo das regulamentações globais de proteção de dados, como a LGPD no Brasil e o GDPR na Europa?</p>
         <ul class="options-list">
@@ -38,7 +38,7 @@
       </section>
 
       <!-- Pergunta 2 -->
-      <section class="card">
+      <section class="card" id="block-q2">
         <h2>Questão 2: Boas Práticas de Privacidade</h2>
         <p class="question-text">O que significa o conceito de <em>Privacy by Design</em> (Privacidade desde a Conceção) no desenvolvimento de software?</p>
         <ul class="options-list">
@@ -55,7 +55,7 @@
       </section>
 
       <!-- Pergunta 3: Estudo de Caso -->
-      <section class="card example-card">
+      <section class="card example-card" id="block-q3">
         <h2>💡 Questão Prática (Estudo de Caso)</h2>
         <p class="question-text">Uma empresa de e-commerce sofreu uma violação de dados e centenas de palavras-passe de clientes foram expostas. De acordo com as leis modernas de proteção de dados, qual deve ser uma das primeiras medidas obrigatórias?</p>
         <ul class="options-list">
@@ -71,12 +71,22 @@
         </ul>
       </section>
 
+      <!-- Área de Verificação e Feedback -->
+      <div class="action-area" style="margin-top: 30px; text-align: center;">
+        <button type="button" id="btnVerify" class="action-btn" style="background-color: #0066cc; cursor: pointer;">Verificar Respostas</button>
+        <div id="feedback" class="feedback-message" style="margin-top: 15px; font-weight: bold;"></div>
+      </div>
+
     </main>
 
     <!-- Navegação / Ações -->
-    <footer class="actions-container">
-      <a href="aula6.html" class="action-btn">← Voltar à Aula 6</a>
-      <a href="certificado.html" class="action-btn btn-next">Ver Certificado Final →</a>
+    <footer class="actions-container" style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px;">
+      <a href="../html/avancado1.html" class="action-btn">← Voltar a aula</a>
+      
+      <div style="display: flex; gap: 10px;">
+        <button type="button" id="btnComplete" class="action-btn" style="background-color: #1e293b; cursor: pointer;">Concluir Módulo 6</button>
+        <a href="../html/certificado_completo.html" id="btnCertificate" class="action-btn btn-next" style="opacity: 0.5; pointer-events: none;">Ver Certificado Final →</a>
+      </div>
     </footer>
 
   </div>

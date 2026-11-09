@@ -94,3 +94,17 @@ header h1{
 .cadastro a {
     color: #9bbce8;
 }
+footer {
+    width: 100%;
+    padding: 1rem 2rem;
+    color: #94a3b8; 
+    text-align: left; 
+    font-size: 0.875rem;
+}
+
+
+footer span, 
+footer a {
+    color: #00f2fe; 
+    text-decoration: none;
+}

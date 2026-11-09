@@ -16,7 +16,7 @@ body {
   line-height: 1.6;
 }
 
-/* Cabeçalho */
+
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -178,7 +178,7 @@ main {
   background: #0ea5e9;
 }
 
-/* Rodapé */
+
 footer {
   text-align: center;
   padding: 2rem;

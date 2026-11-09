@@ -1,45 +1,82 @@
-function validarExercicios() {
-  const q1 = document.querySelector('input[name="q1"]:checked');
-  const q2 = document.querySelector('input[name="q2"]:checked');
-  const feedback = document.getElementById('feedback-geral');
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Seleção de elementos do DOM
+    const btnVerify = document.getElementById('btnVerify');
+    const btnComplete = document.getElementById('btnComplete');
+    const btnNextModule = document.getElementById('btnNextModule');
+    const feedback = document.getElementById('feedback');
 
-  // Remove classes anteriores para atualizar o estado visual
-  feedback.className = 'feedback-container';
+    // 2. Definição das respostas corretas do questionário
+    const correctAnswers = {
+        q1: 'integridade',
+        q2: 'engenharia_social'
+    };
 
-  // Valida se o utilizador respondeu a ambas as perguntas
-  if (!q1 || !q2) {
-    feedback.style.display = 'block';
-    feedback.classList.add('warning');
-    feedback.innerHTML = '⚠️ Por favor, responda a ambas as questões antes de verificar!';
-    return;
-  }
+    // 3. Funcionalidade: Verificar Respostas
+    if (btnVerify) {
+        btnVerify.addEventListener('click', () => {
+            const q1Selected = document.querySelector('input[name="q1"]:checked');
+            const q2Selected = document.querySelector('input[name="q2"]:checked');
 
-  let acertos = 0;
-  let mensagem = '<strong>Resultado da Avaliação:</strong><br><br>';
+            // Limpa feedbacks e bordas anteriores
+            feedback.textContent = '';
+            document.querySelectorAll('.question-block').forEach(block => {
+                block.style.borderColor = '#1e293b';
+            });
 
-  // Validação da Questão 1 (A resposta correta é 'c' - Integridade)
-  if (q1.value === 'c') {
-    acertos++;
-    mensagem += '✅ <strong>Questão 1:</strong> Correto! A Integridade foi violada porque os dados foram modificados.<br>';
-  } else {
-    mensagem += '❌ <strong>Questão 1:</strong> Incorreto. O pilar afetado por alterações indevidas de dados é a Integridade.<br>';
-  }
+            // Validação se o utilizador respondeu a tudo
+            if (!q1Selected || !q2Selected) {
+                feedback.style.color = '#ef4444';
+                feedback.textContent = '⚠️ Por favor, responda a todas as questões antes de verificar.';
+                return;
+            }
 
-  // Validação da Questão 2 (A resposta correta é 'b' - Engenharia Social)
-  if (q2.value === 'b') {
-    acertos++;
-    mensagem += '✅ <strong>Questão 2:</strong> Correto! Trata-se de Engenharia Social (manipulação do fator humano).<br>';
-  } else {
-    mensagem += '❌ <strong>Questão 2:</strong> Incorreto. A manipulação de pessoas fingindo ser uma figura de autoridade é Engenharia Social.<br>';
-  }
+            const isQ1Correct = q1Selected.value === correctAnswers.q1;
+            const isQ2Correct = q2Selected.value === correctAnswers.q2;
 
-  // Exibição do resultado visual
-  feedback.style.display = 'block';
-  if (acertos === 2) {
-    feedback.classList.add('success');
-  } else {
-    feedback.classList.add('error');
-  }
+            // Destaca visualmente os blocos conforme o resultado
+            document.getElementById('block-q1').style.borderColor = isQ1Correct ? '#22c55e' : '#ef4444';
+            document.getElementById('block-q2').style.borderColor = isQ2Correct ? '#22c55e' : '#ef4444';
 
-  feedback.innerHTML = mensagem;
-}
+            // Feedback geral
+            if (isQ1Correct && isQ2Correct) {
+                feedback.style.color = '#22c55e';
+                feedback.textContent = '🎉 Excelente! Respostas corretas. Podes agora concluir a aula.';
+            } else {
+                feedback.style.color = '#f59e0b';
+                feedback.textContent = '❌ Algumas respostas estão incorretas. Ajusta as tuas escolhas e tenta novamente.';
+            }
+        });
+    }
+
+    // 4. Funcionalidade: Concluir Aula 1
+    if (btnComplete) {
+        btnComplete.addEventListener('click', () => {
+            // Grava o progresso no navegador
+            localStorage.setItem('cybersec_aula1_completed', 'true');
+            
+            // Liberta o botão de próximo módulo
+            if (btnNextModule) {
+                btnNextModule.disabled = false;
+                btnNextModule.removeAttribute('disabled');
+            }
+            
+            feedback.style.color = '#00f2fe';
+            feedback.textContent = '✅ Aula 1 marcada com sucesso! O próximo módulo foi liberado.';
+        });
+    }
+
+    // 5. Funcionalidade: Direcionar para a Próxima Página / Módulo
+    if (btnNextModule) {
+        btnNextModule.addEventListener('click', () => {
+            if (!btnNextModule.disabled) {
+                window.location.href = 'inicio.html'; 
+            }
+        });
+    }
+
+    // Mantém o próximo módulo desbloqueado ao recarregar se já tiver sido concluído antes
+    if (localStorage.getItem('cybersec_aula1_completed') === 'true' && btnNextModule) {
+        btnNextModule.disabled = false;
+        btnNextModule.removeAttribute('disabled');
+    }
+});
