@@ -115,37 +115,36 @@
         </section>
     </div>
 
-    <!-- Script de Leitura do Progresso (Local Storage) -->
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const totalModulos = 3; // Módulos principais associados aos exercícios
-        let modulosConcluidos = 0;
+   <script>
+document.addEventListener('DOMContentLoaded', function () {
 
-        // Conta quantos módulos (1, 2 e 3) foram concluídos no script comum de exercícios
-        for (let i = 1; i <= totalModulos; i++) {
-            if (localStorage.getItem(`cybersec_modulo${i}_completed`) === 'true') {
-                modulosConcluidos++;
-            }
-        }
+    const modulos = [
+        'iniciante2.1',
+        'intermediario2',
+        'avancado2'
+    ];
 
-        // Calcula a percentagem exata com base nos módulos concluídos
-        let porcentagem = Math.round((modulosConcluidos / totalModulos) * 100);
-        if (modulosConcluidos === totalModulos) porcentagem = 100;
+    let concluidos = JSON.parse(
+        localStorage.getItem('cybersec_progresso')
+    ) || [];
 
-        // Seleciona os elementos corretos da barra de progresso no HTML
-        const barra = document.getElementById('progress-bar') || document.querySelector('.barra-preenchida');
-        const texto = document.getElementById('progress-text');
+    const quantidade = modulos.filter(function(modulo) {
+        return concluidos.includes(modulo);
+    }).length;
 
-        // Aplica visualmente a largura e o texto dinâmico
-        if (barra) {
-            barra.style.width = `${porcentagem}%`;
-            barra.style.transition = 'width 0.4s ease-in-out';
-        }
-        
-        if (texto) {
-            texto.textContent = `${porcentagem}% Completos`;
-        }
-    });
-    </script>
+    const porcentagem = Math.round(
+        (quantidade / modulos.length) * 100
+    );
+
+    const barra = document.getElementById('barraProgresso');
+    const texto = document.getElementById('textoProgresso');
+
+    barra.style.width = porcentagem + '%';
+    texto.textContent = porcentagem + '% Completo';
+
+});
+
+
+</script>    
 </body>
 </html>

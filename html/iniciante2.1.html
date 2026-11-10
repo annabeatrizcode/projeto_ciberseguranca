@@ -1,112 +1,245 @@
+
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Exercícios de Conclusão - Módulo 1</title>
-    <!-- Ligação ao CSS externo -->
+
     <link rel="stylesheet" href="../CSS/iniciante2.1.css">
-    <script src="../javascript/inicio.js" defer></script>
 </head>
+
 <body>
-    <header class="main-header">
-        <h1>Cyber<span style="color: #38bdf8;">Sec</span></h1>
-    </header>
 
-    <div class="container-aula">
-        <div class="navegacao-topo">
-            <a href="inicio.html" class="link-voltar">← Voltar</a>
-        </div>
-        
-        <h1 class="titulo-aula">Introdução à Cibersegurança</h1>
-        <p class="subtitulo-aula">Conheça os fundamentos essenciais da proteção no ambiente digital.</p>
+<header class="main-header">
+    <h1>Cyber<span style="color: #38bdf8;">Sec</span></h1>
+</header>
 
-        <div class="card-modulo">
-            <h2 class="titulo-exercicios">🛠 Exercícios Práticos: Mão na Massa</h2>
-            <p>Responda às duas questões abaixo para validar o seu conhecimento sobre os conceitos base de cibersegurança.</p>
+<div class="container-aula">
 
-            <!-- Questão 1 -->
-            <div class="questao-bloco">
-                <div class="questao-titulo">1. Estudo de Caso — Alteração Indevida:</div>
-                <div class="questao-cenario">"Um invasor conseguiu aceder ao sistema de uma empresa e alterou os relatórios financeiros de um projeto, fazendo com que os dados exibidos ficassem incorretos."</div>
-                <div class="questao-pergunta">Qual pilar da Tríade CIA foi diretamente violado?</div>
-                
-                <div class="opcoes-grupo">
-                    <label class="opcao-item">
-                        <input type="radio" name="q1" value="a"> Confidencialidade
-                    </label>
-                    <label class="opcao-item">
-                        <input type="radio" name="q1" value="b"> Disponibilidade
-                    </label>
-                    <label class="opcao-item">
-                        <input type="radio" name="q1" value="c"> Integridade
-                    </label>
-                </div>
-            </div>
-
-            <!-- Questão 2 -->
-            <div class="questao-bloco">
-                <div class="questao-titulo">2. Estudo de Caso — Fator Humano:</div>
-                <div class="questao-cenario">"Recebeu uma mensagem urgente do seu suposto superior a solicitar o envio imediato da sua palavra-passe para aceder ao servidor de ficheiros."</div>
-                <div class="questao-pergunta">Qual é a técnica de ataque aplicada nesta situação?</div>
-
-                <div class="opcoes-grupo">
-                    <label class="opcao-item">
-                        <input type="radio" name="q2" value="a"> Ataque de Força Bruta
-                    </label>
-                    <label class="opcao-item">
-                        <input type="radio" name="q2" value="b"> Engenharia Social
-                    </label>
-                    <label class="opcao-item">
-                        <input type="radio" name="q2" value="c"> Negação de Serviço (DDoS)
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <!-- BOTÕES EM BAIXO -->
-        <div class="bloco-acoes-inferiores">
-            <button type="button" id="btnVerificar" class="btn-verificar">Verificar Respostas</button>
-            <div id="feedbackConclusao" style="text-align: center; font-weight: 500; font-size: 0.9rem;"></div>
-            
-            <div class="rodape-navegacao-dupla">
-                <button type="button" id="btnConcluirModulo" class="btn-concluir-aula">Concluir Módulo ✓</button>
-                </button>
-                <a href="../html/inicio.html" class="btn-proximo">Próximo Módulo →</a>
-            </div>
-        </div>
+    <div class="navegacao-topo">
+        <a href="inicio.html" class="link-voltar">← Voltar</a>
     </div>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const numeroDoModulo = 1; // Ajustar para 2 ou 3 em cada página correspondente
-    const btnConcluir = document.getElementById('btnConcluirModulo');
-    const feedback = document.getElementById('feedbackConclusao');
 
-    if (btnConcluir) {
-        // Estado inicial se já tiver sido concluído previamente
-        if (localStorage.getItem(`cybersec_modulo${numeroDoModulo}_completed`) === 'true') {
-            btnConcluir.style.backgroundColor = '#22c55e';
-            btnConcluir.style.color = '#080c14';
-            btnConcluir.textContent = 'Módulo Concluído ✓';
+    <h1 class="titulo-aula">Introdução à Cibersegurança</h1>
+
+    <p class="subtitulo-aula">
+        Conheça os fundamentos essenciais da proteção no ambiente digital.
+    </p>
+
+    <div class="card-modulo">
+
+        <h2 class="titulo-exercicios">🛠 Exercícios Práticos: Mão na Massa</h2>
+
+        <p>Responda às duas questões abaixo para validar seu conhecimento.</p>
+
+        <!-- QUESTÃO 1 -->
+
+        <div class="questao-bloco">
+
+            <div class="questao-titulo">
+                1. Estudo de Caso — Alteração Indevida:
+            </div>
+
+            <div class="questao-cenario">
+                Um invasor conseguiu acessar o sistema de uma empresa e alterou os relatórios financeiros de um projeto.
+            </div>
+
+            <div class="questao-pergunta">
+                Qual pilar da Tríade CIA foi diretamente violado?
+            </div>
+
+            <div class="opcoes-grupo">
+
+                <label class="opcao-item">
+                    <input type="radio" name="q1" value="a">
+                    Confidencialidade
+                </label>
+
+                <label class="opcao-item">
+                    <input type="radio" name="q1" value="b">
+                    Disponibilidade
+                </label>
+
+                <label class="opcao-item">
+                    <input type="radio" name="q1" value="c">
+                    Integridade
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- QUESTÃO 2 -->
+
+        <div class="questao-bloco">
+
+            <div class="questao-titulo">
+                2. Estudo de Caso — Fator Humano:
+            </div>
+
+            <div class="questao-cenario">
+                Você recebe uma mensagem urgente de um suposto superior solicitando sua senha para acessar o servidor.
+            </div>
+
+            <div class="questao-pergunta">
+                Qual é a técnica de ataque aplicada nesta situação?
+            </div>
+
+            <div class="opcoes-grupo">
+
+                <label class="opcao-item">
+                    <input type="radio" name="q2" value="a">
+                    Ataque de Força Bruta
+                </label>
+
+                <label class="opcao-item">
+                    <input type="radio" name="q2" value="b">
+                    Engenharia Social
+                </label>
+
+                <label class="opcao-item">
+                    <input type="radio" name="q2" value="c">
+                    Negação de Serviço (DDoS)
+                </label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BOTÕES -->
+
+    <div class="bloco-acoes-inferiores">
+
+        <button type="button" id="btnVerificar" class="btn-verificar">
+            Verificar Respostas
+        </button>
+
+        <div id="feedbackConclusao"
+             style="text-align: center; font-weight: 500; font-size: 0.9rem;">
+        </div>
+
+        <div class="rodape-navegacao-dupla">
+
+            <button type="button" id="btnConcluirModulo" class="btn-concluir-aula">
+                Concluir Módulo ✓
+            </button>
+
+            <a href="inicio.html" class="btn-proximo">
+                Próximo Módulo →
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const btnVerificar = document.getElementById("btnVerificar");
+    const btnConcluir = document.getElementById("btnConcluirModulo");
+    const feedback = document.getElementById("feedbackConclusao");
+
+    let respostasCorretas = false;
+
+    // Verificar respostas
+
+    btnVerificar.addEventListener("click", function () {
+
+        const q1 = document.querySelector('input[name="q1"]:checked');
+        const q2 = document.querySelector('input[name="q2"]:checked');
+
+        if (!q1 || !q2) {
+
+            respostasCorretas = false;
+
+            feedback.style.color = "#ef4444";
+            feedback.textContent = "Responda às duas questões primeiro!";
+
+            return;
         }
 
-        btnConcluir.addEventListener('click', () => {
-            // Guarda o estado individual e atualiza o último módulo
-            localStorage.setItem(`cybersec_modulo${numeroDoModulo}_completed`, 'true');
-            localStorage.setItem('cybersec_ultimo_modulo', numeroDoModulo);
+        if (q1.value === "c" && q2.value === "b") {
 
-            // Atualiza o feedback visual do botão
-            btnConcluir.style.backgroundColor = '#22c55e';
-            btnConcluir.style.color = '#080c14';
-            btnConcluir.textContent = 'Módulo Concluído ✓';
+            respostasCorretas = true;
 
-            if (feedback) {
-                feedback.style.color = '#22c55e';
-                feedback.textContent = `✅ Módulo ${numeroDoModulo} concluído com sucesso!`;
-            }
-        });
+            feedback.style.color = "#22c55e";
+            feedback.textContent = "Parabéns! Você acertou as duas questões. Agora pode concluir o módulo.";
+
+        } else {
+
+            respostasCorretas = false;
+
+            feedback.style.color = "#ef4444";
+            feedback.textContent = "Existem respostas incorretas. Tente novamente!";
+
+        }
+
+    });
+
+    // Recuperar progresso salvo
+
+    let concluidos = JSON.parse(
+        localStorage.getItem("cybersec_progresso")
+    ) || [];
+
+    // Verificar se já foi concluído
+
+    if (concluidos.includes("iniciante2")) {
+
+        btnConcluir.textContent = "Módulo Concluído ✓";
+        btnConcluir.style.backgroundColor = "#22c55e";
+        btnConcluir.disabled = true;
+
+        feedback.style.color = "#22c55e";
+        feedback.textContent = "Este módulo já foi concluído!";
+
     }
+
+    // Concluir módulo
+
+    btnConcluir.addEventListener("click", function () {
+
+        if (!respostasCorretas) {
+
+            feedback.style.color = "#ef4444";
+            feedback.textContent = "Verifique e acerte as duas questões antes de concluir!";
+
+            return;
+        }
+
+        if (!concluidos.includes("iniciante2")) {
+
+            concluidos.push("iniciante2");
+
+        }
+
+        localStorage.setItem(
+            "cybersec_progresso",
+            JSON.stringify(concluidos)
+        );
+
+        btnConcluir.textContent = "Módulo Concluído ✓";
+        btnConcluir.style.backgroundColor = "#22c55e";
+        btnConcluir.style.color = "#080c14";
+        btnConcluir.disabled = true;
+
+        feedback.style.color = "#22c55e";
+        feedback.textContent = "Módulo concluído com sucesso!";
+
+    });
+
 });
-</script>   
+
+</script>
+
 </body>
 </html>
