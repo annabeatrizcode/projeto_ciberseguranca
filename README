@@ -1,0 +1,64 @@
+# CyberSec — Plataforma de Aprendizado em Cibersegurança
+
+## Sobre o projeto
+
+O **CyberSec** é uma plataforma educacional desenvolvida com o objetivo de ensinar conceitos fundamentais de cibersegurança de maneira simples, organizada e acessível.
+
+O projeto oferece conteúdos divididos por níveis de conhecimento, permitindo que os usuários aprendam sobre segurança digital desde os conceitos básicos até assuntos mais avançados.
+
+## Objetivo
+
+Desenvolver uma plataforma de aprendizado que incentive o conhecimento sobre segurança da informação, boas práticas na internet e proteção de dados.
+
+## Conteúdos disponíveis
+
+A plataforma está organizada em três níveis:
+
+- **Iniciante:** conceitos básicos de segurança digital e segurança na internet.
+- **Intermediário:** aprofundamento em conceitos e práticas de proteção.
+- **Avançado:** conteúdos mais complexos relacionados à cibersegurança.
+
+## Funcionalidades
+
+- Página inicial de apresentação.
+- Sistema de cadastro e login.
+- Área de cursos dividida por níveis.
+- Aulas com conteúdos educativos.
+- Acompanhamento do progresso dos módulos.
+- Conclusão de módulos.
+- Página de validação de certificados.
+- Área do aluno.
+
+## Tecnologias utilizadas
+
+- HTML5 — estrutura das páginas.
+- CSS3 — estilização e organização visual.
+- JavaScript — funcionalidades e interatividade.
+
+## Organização do projeto
+
+- `html/` — páginas do site.
+- `CSS/` — arquivos de estilização.
+- `javascript/` — códigos responsáveis pelas funcionalidades.
+
+## Evidências do projeto
+
+Esta seção apresenta imagens das páginas e funcionalidades desenvolvidas.
+
+Adicione aqui capturas de tela da página inicial, dos cursos, da área do aluno e dos certificados.
+
+## Contribuição
+
+O projeto foi desenvolvido com finalidade acadêmica e educacional, buscando aplicar conhecimentos de desenvolvimento web e segurança da informação.
+
+Sugestões de melhorias e novas funcionalidades são bem-vindas.
+
+## Desenvolvedora
+
+**Anna Beatriz**
+
+Projeto acadêmico — Desenvolvimento Web e Cibersegurança.
+
+---
+
+**CyberSec — Aprenda hoje, proteja o amanhã.**
